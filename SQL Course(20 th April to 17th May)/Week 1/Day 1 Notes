@@ -1,0 +1,54 @@
+Definition
+DDL (Data Definition Language) refers to a set of SQL commands that are used to define, modify, and manage database structures such as tables, schemas, and constraints. Unlike Data Manipulation Language (DML), which deals with the manipulation of data within tables, DDL is concerned with the creation and structure of the database itself.
+
+Key DDL commands include:
+
+CREATE: Used to create new tables, databases, and other database objects.
+ALTER: Used to modify existing database structures, such as adding or dropping columns.
+DROP: Used to delete tables or other database objects.
+TRUNCATE: Used to remove all records from a table, but it retains the structure.
+Real World Example
+Think of DDL as the blueprint for constructing a building. The CREATE command is like drawing the initial plans for the building, the ALTER command is like making adjustments during construction, the DROP command is like demolishing the building, and the TRUNCATE command is like clearing the interior of the building while keeping the walls intact.
+
+Syntax
+Here is a basic overview of the syntax used in DDL commands:
+
+CREATE:
+CREATE DATABASE database_name;
+CREATE TABLE table_name (column1 datatype, column2 datatype, ...);
+ALTER:
+ALTER TABLE table_name ADD column_name datatype;
+ALTER TABLE table_name DROP COLUMN column_name;
+DROP:
+DROP DATABASE database_name;
+DROP TABLE table_name;
+TRUNCATE:
+TRUNCATE TABLE table_name;
+Tabular Representation: DDL Commands Overview
+Command	Action
+CREATE	Create new database objects
+ALTER	Modify existing database objects
+DROP	Delete database objects
+TRUNCATE	Remove all records from a table
+Example
+CREATE: To create a new table for storing student records, the CREATE TABLE command is used.
+ALTER: If we want to add a new column for Phone Number to the Students table, we use ALTER TABLE.
+DROP: If we no longer need the Students table, we can remove it using DROP TABLE.
+TRUNCATE: To remove all student records but keep the table structure intact, we use TRUNCATE TABLE.
+Use Cases
+CREATE: When starting a new database or adding new tables to an existing one.
+ALTER: When the structure of a database needs to be updated, such as adding or removing columns.
+DROP: When a table or database is no longer needed and needs to be removed from the system.
+TRUNCATE: When all data in a table needs to be removed, but the table structure should be kept for future use.
+Important Notes
+DDL commands are auto-committed, meaning any changes made are permanent and cannot be undone.
+When using the DROP command, be cautious as it permanently removes the table or database along with all its data.
+TRUNCATE removes data but doesn't free up space like DROP does. It is faster than deleting rows one by one.
+Drawback
+Since DDL commands make permanent changes to the database structure, mistakes in using them (like DROP) can lead to loss of data.
+DDL operations can lock tables, which may cause performance issues when working with large databases or high-traffic systems.
+Summary
+DDL refers to the set of SQL commands used for defining, modifying, and managing database structures.
+The most common DDL commands are CREATE, ALTER, DROP, and TRUNCATE.
+DDL commands are permanent and cannot be undone, so use them with caution.
+They are essential for managing the physical structure of a database, but should be handled carefully to avoid accidental data loss or performance issues.
